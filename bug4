@@ -1,0 +1,1 @@
+The validate_stream_message_address_info function in our compose code path doesn't tag all of the strings it uses for internationalization.
