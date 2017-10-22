@@ -1,0 +1,5 @@
+Something related to either our Python 3 migration or our recent logging refactor means that ZulipLimiter is no longer correctly rate-limiting the emails when Zulip is down due to something like memcached being down.
+
+One interesting observation is that the memcached tracebacks seem to have a fairly random number in them (37562480) which could explain what we're seeing.
+
+However, we also recently had the error email format get super verbose, it's possible the right fix is to correct the tracebacks, and that will magically fix the ZulipLimiter problem.
