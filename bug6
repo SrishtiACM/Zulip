@@ -1,0 +1,14 @@
+Scenario:
+
+Email Auth Enabled to Create Organisation
+LDAP then enabled and tested, works fine.
+Email Auth then disabled and server restarted.
+
+However it still lets you register a user via email (who is none LDAP)
+Sends confirmation email
+Link in confirmation email will let them set a password and then log them in.
+However if you log out and try logging back, auth will fail.
+
+The registration by emails except those found in LDAP should be disabled whilst email auth is disabled.
+
+Issue first reported by another user on chat.zulip.org, I replicated and got the same results.
