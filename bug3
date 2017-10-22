@@ -1,0 +1,16 @@
+If you write the following in a Zulip message:
+
+Testing list formatting
+testing more
+
+* item a
+* item b
+* item c
+
+testing extra
+Then the fact that the "testing extra" is there at the end of the message causing the spacing between the paragraph at the top and the bulleted list to be extra large, like so:
+-@RahulBajaj------
+
+I don't think it's a regression, it's just a weird CSS bug. We have a margin-bottom of 10px for .messagebox p in general, but just 3px for .messagebox p last-of-type. And so a bulleted list that's just after the last
+
+tag in a message will have less margin between the paragraph and the bulleted list than one where there's another paragraph after the bulleted list.
