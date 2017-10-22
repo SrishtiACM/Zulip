@@ -1,0 +1,3 @@
+Since every stream has an email address it is useful to use this feature to forward emails to a specific stream.
+Usually emails are not written with markdown syntax in mind and the emails sometimes render in strange ways.
+I think it would be a good idea to add a feature to disable the markdown render for the email gateway bot (emailgateway@zulip.com)
