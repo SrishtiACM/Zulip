@@ -1,1 +1,2 @@
 The validate_stream_message_address_info function in our compose code path doesn't tag all of the strings it uses for internationalization.
+Fixing this is a great bite-size issue for someone new, but make sure to read about how i18n.t works and the i18next library. See https://zulip.readthedocs.io/en/latest/translating.html as a useful resource.
