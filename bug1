@@ -1,0 +1,18 @@
+I don't have any details other than this traceback, but ti seems worth investigating, since seems to have started happening occasionally on our production systems:
+
+Message:
+Failed to execute 'readAsBinaryString' on 'FileReader': parameter 1 is not of type 'Blob'.
+
+Stacktrace:
+TypeError: Failed to execute 'readAsBinaryString' on 'FileReader': parameter 1 is not of type 'Blob'.
+    at HTMLDivElement.<anonymous> (/static/min/app.eee53d98b199.js:309:142)
+       = static/third/jquery-filedrop/jquery.filedrop.js line 208 column 7
+
+    at HTMLDivElement.n (/static/webpack-bundles/common-1db4ceb450fd3980d8e0.ee2543385d97.js:1:3450)
+       = webpack:///./static/js/blueslip.js line 225 column 1
+
+    at HTMLDivElement.dispatch (/static/webpack-bundles/common-1db4ceb450fd3980d8e0.ee2543385d97.js:24:34743)
+       = webpack:////srv/zulip-npm-cache/4218ab222217db9cca40d7b11edfeea4a54dce1c/~/jquery/dist/jquery.js?1053 line 5206 column 1
+
+    at HTMLDivElement.A.handle (/static/webpack-bundles/common-1db4ceb450fd3980d8e0.ee2543385d97.js:24:32752)
+       = webpack:////srv/zulip-npm-cache/4218ab222217db9cca40d7b11edfeea4a54dce1c/~/jquery/dist/jquery.js?
